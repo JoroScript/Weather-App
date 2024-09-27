@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- <input type="search" name="searchBar" id="searchBar"> -->
+<body>
+    <div class="loader"></div>
+    <div id="first">
+        <label for="searchBar">City:</label>
+        <input placeholder="New York..." type="search" name="searchBar" id="searchBar">
+    </div>
+   
+    <div id="container">
+  
+    <div id="cityDiv">
+        <h1 id="cityName"></h1>
+        <p id="currDate"></p>
+    </div>
+    <div id="inner">
+        <div id="iconDiv">
+            <img src="" alt="" id="iconImg">
+            <span id="currTemp"></span>
+        </div>       
+        <div id="metricsDiv">
+            <p id="currConds"></p>
+            <p id="humidity"></p>
+            <p id="feelsLike"></p>
+            <p id="wind"></p>
+            </div>
+    </div>
+    <div id="options"> 
+       <button id="today">Today</button>
+       <button id="tomorrow">Tomorrow</button>
+       <button id="nextDays">Next 7 Days</button>
+    </div>
+    <div id="scroller">
+       
+    </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    color: blanchedalmond;
+    font-family: "Share Tech Mono", monospace;
+
+}
+body{
+    /* background: linear-gradient(84deg, rgba(2,0,36,1) 0%, rgba(35,233,188,1) 0%, rgba(25,148,212,1) 23%, rgba(27,172,163,1) 42%, rgba(27,210,218,1) 78%, rgba(0,212,255,1) 100%); */
+    background-image: url('https://static.dir.bg/uploads/images/2021/12/08/2286285/1920x1080.jpg?_=1638918209');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+input{
+    color: white;
+    outline: 1px solid white;
+    border: 1px solid white;
+    background-color: transparent;
+    font-size: 0.5em;
+    width: 300px;
+    border-radius: 10px;
+    position: relative;
+    top: 3px;
+}
+
+#first{
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    align-content:center;
+    text-align: center;
+    justify-items: center;
+    font-family: "Permanent Marker", cursive;
+}
+#container{
+        font-size: clamp(12px, 0.9vw, 24px); /* Responsive text that scales with viewport */
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    flex-shrink: 1;
+    padding: 1em;
+    border: 5px solid white;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 50%;
+    background-color: rgba(365,365,365,0.125);
+    box-shadow: 0px 0px 18px 1px #fff;
+}
+#iconImg{
+    width: 175px;
+    height: 175px;
+    display: none;
+}
+#cityDiv{
+    width: 100%;
+}
+#iconDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+#currTemp{
+    position: relative;
+    font-size: 4em;
+    margin-bottom: 0.4em;
+}
+#currTemp span{
+    position: absolute;
+    top: 5px;
+    font-size: 0.5em;
+}
+.temp{
+    position: relative;
+    font-size: 1.5em;
+}
+.temp span{
+position: absolute;
+top: 3px;
+    font-size: 0.5em;
+}
+#currConds{
+    font-size: 1.5em;
+}
+#cityName{
+    display: inline-block;
+    font-size: 3.5em;
+    border-bottom: 3px solid white;
+    color: firebrick;
+    font-family: "Permanent Marker", cursive;
+}
+#currDate{
+    font-size: 2em;
+    color: firebrick;
+}
+#currConds{
+    display: flex;
+    justify-content: space-around;
+}
+#inner{
+    margin-top: 1.5em;
+    padding: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+#inner p{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid white;
+    font-size: 1.6em;
+}
+#inner #metricsDiv{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1em;
+    border: 3px solid white;
+    flex: 0 1 50%;
+    margin: 0 auto;
+}
+#scroller{
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    border-radius: 15px;
+    gap: 10px;
+    scroll-behavior: smooth;
+}
+.child{
+    flex: 0 0 auto;
+    width: 120px;
+    height: 110px;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding-top: 0.3em;
+}
+#scroller::-webkit-scrollbar {
+    height: 15px; /* Height of the horizontal scrollbar */
+}
+#scroller::-webkit-scrollbar-thumb {
+    background-color: rgba(170,170,170,0.78); /* Color of the scrollbar thumb */
+    
+    border-radius: 4px; /* Rounded corners */
+}
+
+.imgHolder{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+#options{
+    text-align: center;
+    display: none;
+    padding: 2em;
+    margin: 0 auto;
+}
+#options button{
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    margin-right: 1em;
+    color: white;
+}
+
+/* animation load */
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+    display: none;
+    width: 100px;
+    aspect-ratio: 4;
+    --_g: no-repeat radial-gradient(circle closest-side,#fff 90%,#0000);
+    background: 
+      var(--_g) 0%   50%,
+      var(--_g) 50%  50%,
+      var(--_g) 100% 50%;
+    background-size: calc(100%/3) 100%;
+    animation: l7 1s infinite linear;
+  }
+  @keyframes l7 {
+      33%{background-size:calc(100%/3) 0%  ,calc(100%/3) 100%,calc(100%/3) 100%}
+      50%{background-size:calc(100%/3) 100%,calc(100%/3) 0%  ,calc(100%/3) 100%}
+      66%{background-size:calc(100%/3) 100%,calc(100%/3) 100%,calc(100%/3) 0%  }
+  }
+
+
+
+
+
+
+
+
+
